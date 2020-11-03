@@ -9,6 +9,8 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.string :location
 
       t.timestamps
+
+      
     end
   end
 end
