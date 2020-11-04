@@ -1,5 +1,37 @@
-<h1>Bienvenue sur EventBrite</h1>
 
 
+<main role="main">
 
-<p>Liste des evènements</p>
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Bienvenue sur EventBrite</h1>
+          <p>Voici la liste des évènements :</p>
+          
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            
+
+              <%= Event.all.each do |e| %>
+                <div class="card">
+                  <div class="card-body">
+                    <h2 class="card-title"><%= e.title %></h2>
+          
+                    <p class="card-text"><%= e.description %> </p>
+                   
+              
+                  </div>
+                </div>
+              <%end%>
+          </div>
+        </div>
+        
+
+      </div> <!-- /container -->
+
+</main>
